@@ -1,0 +1,36 @@
+// {
+//   "presets": [
+//     "@vue/app"
+//   ]
+// }
+{
+  "presets": [
+    [
+      
+      "@babel/preset-env",
+      {
+        "targets": {
+          "chrome": 58,
+          "ios": 16      //高于11版本才能正常执行
+        },
+
+        // "useBuiltIns": "entry",
+        "useBuiltIns": "usage",
+        "corejs": {
+          "version": 3,
+          "proposals": false
+        }
+      }
+      
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": false
+      }
+    ]
+  ]
+}
+  
